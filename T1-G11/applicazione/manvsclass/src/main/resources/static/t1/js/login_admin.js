@@ -1,27 +1,21 @@
 //MODIFICA (11/02/2024) : Controllo form login */
 function Logi() {
 
-    const usernameSuffix = document.getElementById('usernameSuffix').textContent.trim();
-    const usernameInput = document.getElementById('username').value;
-    const username = usernameInput + usernameSuffix;
+    const usernameSuffix = document.getElementById('usernameSuffix').value;
+    const username = document.getElementById('username').value + usernameSuffix;
     const password = document.getElementById('password').value;
 
-    if (!usernameInput || !password) {
-        alert("Per favore, compila tutti i campi obbligatori!");
-        return;
-    }
-
     const data = {
-        username: username,
-        password: password
+      username: username,
+      password: password
     };
-
+  
     fetch('/loginAdmin', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
     })
         .then(response => {
             console.log('Response:', response);
@@ -41,7 +35,7 @@ function Logi() {
         })
         .catch((error) => {
             console.error('Error:', error);
-            alert('Si è verificato un errore. Per favore riprova.');
+            //Aggiungi qui il codice per gestire gli errori
         });
 }
 
