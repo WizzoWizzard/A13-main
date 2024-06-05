@@ -119,12 +119,12 @@ a:hover {
     color: rgb(37, 150, 190);
 }
 
-.login-signup-now:hover,
-.login-change-psw:hover,
-.login-invitation:hover {
-    text-decoration: underline;
-    color: rgb(63, 176, 241);
-}
+    .login-signup-now:hover,
+    .login-change-psw:hover,
+    .login-invitation:hover {
+        text-decoration: underline;
+        color: rgb(63, 176, 241);
+    }
 
 .position-relative .input-group-append .input-group-text {
     background: none;
@@ -152,7 +152,6 @@ a:hover {
 
 .remember-me-container {
     padding-left: 0;
-    margin-left: 30px;
 }
 
 .remember-me-checkbox {
