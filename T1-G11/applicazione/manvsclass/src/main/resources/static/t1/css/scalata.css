@@ -1,20 +1,101 @@
-body{
+body {
     background-color: #f4f7f6;
-    margin-top:20px;
+    margin-top: 20px;
     font-family: "Roboto", sans-serif;
+    background-image: url("https://img.freepik.com/foto-premium/uomo-scalare-una-montagna-per-ottenere-la-bandiera-obiettivo-di-realizzazione-e-concetto-di-carriera-difficile_207634-718.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
 .title-container {
     text-align: center;
 }
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid #ddd; /* Bordo grigio chiaro */
+    border-radius: 4px; /* Angoli arrotondati */
+    padding: 20px; /* Spaziatura interna */
+    width: 80%; /* Larghezza della card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombra per un effetto 3D */
+    margin: auto;
+    position: relative; /* Per posizionare assolutamente i figli */
+}
+
 .info-icon {
     position: absolute;
-    top: 25px;
-    left: 1000px;
+    bottom: 20px; /* Regola la distanza dal bordo inferiore della card */
+    right: 20px; /* Regola la distanza dal bordo destro della card */
     font-size: 1.5em;
     color: #ccc;
-    cursor: pointer;            /*clickable element*/
+    cursor: pointer; /* Elemento cliccabile */
 }
+
 .modal-footer {
     display: flex;
     justify-content: center;
+}
+
+input[type="submit"] {
+    background-color: #28a745; /* Verde */
+    color: #fff; /* Testo bianco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altezza completa dello schermo */
+}
+
+.rounds-input {
+    width: 140px; /* Imposta la larghezza desiderata */
+}
+
+.close-btn {
+    cursor: pointer; /* Imposta il cursore come una mano */
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%; /* Riduci la larghezza della card su schermi più piccoli */
+    }
+}
+
+.modal-dialog {
+    margin: auto;
+    top: 23%;
+    transform: translateY(-50%);
+}
+
+/* Aggiunto stile per il tooltip */
+.info-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999;
+    top: calc(85% + 5px); /* Sposta il tooltip sotto l'icona info */
+    left: 76%; /* Posiziona il tooltip al centro rispetto all'icona info */
+    transform: translateX(-50%); /* Centra il tooltip rispetto all'icona info */
+    white-space: nowrap;
+}
+
+/* Quando passi sopra l'icona delle informazioni, mostra il tooltip */
+.info-icon:hover + .info-tooltip {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .info-tooltip {
+        font-size: 12px; /* Riduci la dimensione del testo per dispositivi più piccoli */
+        padding: 3px 6px; /* Riduci il padding del tooltip */
+    }
 }

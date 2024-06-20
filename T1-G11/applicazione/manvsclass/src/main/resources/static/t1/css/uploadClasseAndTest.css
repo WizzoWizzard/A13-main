@@ -1,91 +1,91 @@
 body {
-    background-color: #f4f7f6;
-    margin-top: 20px;
+    background: linear-gradient(90deg, rgba(240,248,255,1) 0%, rgba(173,216,230,1) 50%, rgba(135,206,250,1) 100%) !important;
 }
 
 .file_manager .file a:hover .hover,
 .file_manager .file .file-name small {
-    display: block;
+    display: block
 }
 
 .file_manager .file {
-    padding: 0 !important;
+    padding: 0 !important
 }
 
-.file_manager .file .icon {
-    text-align: center;
-}
+    .file_manager .file .icon {
+        text-align: center
+    }
 
 .file_manager .file {
     position: relative;
     border-radius: .55rem;
-    overflow: hidden;
+    overflow: hidden
 }
 
-.file_manager .file .image,
-.file_manager .file .icon {
-    max-height: 180px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: top;
-}
+    .file_manager .file .image,
+    .file_manager .file .icon {
+        max-height: 180px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: top
+    }
 
-.file_manager .file .hover {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: none;
-    transition: all 0.2s ease-in-out;
-}
+    .file_manager .file .hover {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: none;
+        transition: all 0.2s ease-in-out
+    }
 
-.file_manager .file a:hover .hover {
-    transition: all 0.2s ease-in-out;
-}
+    .file_manager .file a:hover .hover {
+        transition: all 0.2s ease-in-out
+    }
 
-.file_manager .file .icon {
-    padding: 15px 10px;
-    display: table;
-    width: 100%;
-}
+    .file_manager .file .icon {
+        padding: 15px 10px;
+        display: table;
+        width: 100%
+    }
 
-.file_manager .file .icon i {
-    display: table-cell;
-    font-size: 30px;
-    vertical-align: middle;
-    color: #777;
-    line-height: 100px;
-}
+        .file_manager .file .icon i {
+            display: table-cell;
+            font-size: 30px;
+            vertical-align: middle;
+            color: #777;
+            line-height: 100px
+        }
 
-.file_manager .file .file-name {
-    padding: 10px;
-    border-top: 1px solid #f7f7f7;
-}
+    .file_manager .file .file-name {
+        padding: 10px;
+        border-top: 1px solid #f7f7f7
+    }
 
-.file_manager .file .file-name small .date {
-    float: right;
-}
+        .file_manager .file .file-name small .date {
+            float: right
+        }
 
 .folder {
     padding: 20px;
     display: block;
-    color: #777;
+    color: #777
 }
 
 @media only screen and (max-width: 992px) {
     .file_manager .nav-tabs {
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 0
     }
 
-    .file_manager .nav-tabs .nav-item {
-        display: inline-block;
-    }
+        .file_manager .nav-tabs .nav-item {
+            display: inline-block
+        }
 }
 
 .card {
-    background: #fff;
+    background: linear-gradient(to bottom, #f2f2f2, #dddddd);
     transition: .5s;
     border: 0;
+    margin-top: 35px;
     margin-bottom: 30px;
     border-radius: .55rem;
     position: relative;
@@ -117,4 +117,78 @@ a:hover {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+.upload-class-box {
+    background-color: #f0f9ff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex; /* Arranges elements horizontally */
+    align-items: center; /* Aligns elements vertically in the center */
+}
+
+.upload-class-icon {
+    flex: 0 0 80px; /* Sets a fixed width of 80px for the icon */
+    text-align: center;
+    color: #333;
+    font-size: 3rem;
+}
+
+    .upload-class-icon i {
+        line-height: 80px; /* Aligns the icon vertically in the center */
+    }
+
+.upload-class-input {
+    flex: 1; /* Takes up remaining space */
+    margin-left: 20px; /* Adds spacing between icon and input */
+}
+
+    .upload-class-input input[type="file"] {
+        display: none; /* Hides the default file input element */
+    }
+
+    .upload-class-input label {
+        cursor: pointer; /* Changes cursor to a hand on hover */
+        display: inline-block;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #eee;
+        color: #333;
+    }
+
+        .upload-class-input label:hover {
+            background-color: #ddd;
+        }
+
+.input-background {
+    background-color: rgba(135,206,250,0.3) !important;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+@media only screen and (max-width: 576px) {
+    .container.w-50 {
+        width: 100% !important;
+    }
+
+    .btn, {
+        width: 100%
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+}
+
+.btn {
+    margin-top: 25px;
+    width: 200px;
 }

@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
 
+import java.lang.String;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -1001,14 +1003,15 @@ public class HomeController {
         }
 
 		//3: L'username deve rispettare necessariamente il seguente formato: "[username di lunghezza compresa tra 2 e 30 caratteri]_unina"
-		if (admin1.getUsername().length() >=2 && admin1.getUsername().length() <= 30 && (Pattern.matches(".*_unina$", admin1.getUsername()))) {
+		if (admin1.getUsername().length() >=2 && admin1.getUsername().length() <= 30) {
 
-			this.userAdmin.setUsername(admin1.getUsername());
+			String usernameWithSuffix = admin1.getUsername(); //+ "_unina";
+			this.userAdmin.setUsername(usernameWithSuffix);
 			System.out.println("Username settato con successo");
 
 		} else {
 
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username non valido, deve rispettare il seguente formato: [username di lunghezza compresa tra 2 e 30 caratteri]_unina");
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username non valido, deve avere una lunghezza compresa tra 2 e 30 caratteri");
 		}
 
 		//4: L'email deve essere necessariamente quella istituzionale e terminare: o con [nome]@studenti.unina.it oppure [nome]@unina.it
