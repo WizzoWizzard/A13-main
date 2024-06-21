@@ -1,115 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
-    background-color: #f4f7f6;
-    margin-top: 20px;
-  }
-  
-  .file_manager .file a:hover .hover,
-  .file_manager .file .file-name small {
-    display: block;
-  }
-  
-  .file_manager .file {
-    padding: 0 !important;
-  }
-  
-  .file_manager .file .icon {
-    text-align: center;
-  }
-  
-  .file_manager .file {
-    position: relative;
-    border-radius: .55rem;
-    overflow: hidden;
-  }
-  
-  .file_manager .file .image,
-  .file_manager .file .icon {
-    max-height: 180px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: top;
-  }
-  
-  .file_manager .file .hover {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: none;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .file_manager .file a:hover .hover {
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .file_manager .file .icon {
-    padding: 15px 10px;
-    display: table;
-    width: 100%;
-  }
-  
-  .file_manager .file .icon i {
-    display: table-cell;
-    font-size: 30px;
-    vertical-align: middle;
-    color: #777;
-    line-height: 100px;
-  }
-  
-  .file_manager .file .file-name {
-    padding: 10px;
-    border-top: 1px solid #f7f7f7;
-  }
-  
-  .file_manager .file .file-name small .date {
-    float: right;
-  }
-  
-  .folder {
-    padding: 20px;
-    display: block;
-    color: #777;
-  }
-  
-  @media only screen and (max-width: 992px) {
-    .file_manager .nav-tabs {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .file_manager .nav-tabs .nav-item {
-      display: inline-block;
-    }
-  }
-  
-  .card {
-    background: #fff;
-    transition: .5s;
-    border: 0;
-    margin-bottom: 30px;
-    border-radius: .55rem;
-    position: relative;
-    width: 100%;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
-  #adminTable {
-    display: none;
-  }
-  
-  #adminTable th,
-  #adminTable td {
-    text-align: center;
-  }
-  
-  #adminTable thead th {
-    vertical-align: middle;
-  }
-  
-  #adminTable tbody td {
-    vertical-align: middle;
-  }
-  
+  background-image: url('/mnt/data/Screenshot 2024-05-22 140754.png'); /* Update this path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Adjust this value as needed */
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent navbar */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.navbar-brand {
+  color: #2C3E50;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-brand svg {
+  margin-right: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2C3E50;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.table thead th {
+  background-color: #3498DB;
+  color: white;
+}
+
+.table tbody td {
+  background-color: rgba(255, 255, 255, 0.9);
+}
