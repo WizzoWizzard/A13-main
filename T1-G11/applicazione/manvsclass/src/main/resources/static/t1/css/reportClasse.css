@@ -2,71 +2,85 @@ body {
     background-color: #f4f7f6;
     margin-top: 20px;
 }
+
 .file_manager .file a:hover .hover,
 .file_manager .file .file-name small {
-    display: block
+    display: block;
 }
+
 .file_manager .file {
-    padding: 0 !important
+    padding: 0 !important;
 }
+
 .file_manager .file .icon {
-    text-align: center
+    text-align: center;
 }
+
 .file_manager .file {
     position: relative;
     border-radius: .55rem;
-    overflow: hidden
+    overflow: hidden;
 }
+
 .file_manager .file .image,
 .file_manager .file .icon {
     max-height: 180px;
     overflow: hidden;
     background-size: cover;
-    background-position: top
+    background-position: top;
 }
+
 .file_manager .file .hover {
     position: absolute;
     right: 10px;
     top: 10px;
     display: none;
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
 }
+
 .file_manager .file a:hover .hover {
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
 }
+
 .file_manager .file .icon {
     padding: 15px 10px;
     display: table;
-    width: 100%
+    width: 100%;
 }
+
 .file_manager .file .icon i {
     display: table-cell;
     font-size: 30px;
     vertical-align: middle;
     color: #777;
-    line-height: 100px
+    line-height: 100px;
 }
+
 .file_manager .file .file-name {
     padding: 10px;
-    border-top: 1px solid #f7f7f7
+    border-top: 1px solid #f7f7f7;
 }
+
 .file_manager .file .file-name small .date {
-    float: right
+    float: right;
 }
+
 .folder {
     padding: 20px;
     display: block;
-    color: #777
+    color: #777;
 }
+
 @media only screen and (max-width: 992px) {
     .file_manager .nav-tabs {
         padding-left: 0;
-        padding-right: 0
+        padding-right: 0;
     }
     .file_manager .nav-tabs .nav-item {
-        display: inline-block
+        display: inline-block;
     }
 }
+
 .card {
     background: #fff;
     transition: .5s;
@@ -77,6 +91,18 @@ body {
     width: 100%;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
 }
+
 a:hover {
     text-decoration: none;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
 }
