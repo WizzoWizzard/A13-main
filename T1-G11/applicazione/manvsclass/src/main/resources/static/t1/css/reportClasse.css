@@ -12,9 +12,9 @@ body {
     padding: 0 !important;
 }
 
-.file_manager .file .icon {
-    text-align: center;
-}
+    .file_manager .file .icon {
+        text-align: center;
+    }
 
 .file_manager .file {
     position: relative;
@@ -22,48 +22,48 @@ body {
     overflow: hidden;
 }
 
-.file_manager .file .image,
-.file_manager .file .icon {
-    max-height: 180px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: top;
-}
+    .file_manager .file .image,
+    .file_manager .file .icon {
+        max-height: 180px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: top;
+    }
 
-.file_manager .file .hover {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: none;
-    transition: all 0.2s ease-in-out;
-}
+    .file_manager .file .hover {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: none;
+        transition: all 0.2s ease-in-out;
+    }
 
-.file_manager .file a:hover .hover {
-    transition: all 0.2s ease-in-out;
-}
+    .file_manager .file a:hover .hover {
+        transition: all 0.2s ease-in-out;
+    }
 
-.file_manager .file .icon {
-    padding: 15px 10px;
-    display: table;
-    width: 100%;
-}
+    .file_manager .file .icon {
+        padding: 15px 10px;
+        display: table;
+        width: 100%;
+    }
 
-.file_manager .file .icon i {
-    display: table-cell;
-    font-size: 30px;
-    vertical-align: middle;
-    color: #777;
-    line-height: 100px;
-}
+        .file_manager .file .icon i {
+            display: table-cell;
+            font-size: 30px;
+            vertical-align: middle;
+            color: #777;
+            line-height: 100px;
+        }
 
-.file_manager .file .file-name {
-    padding: 10px;
-    border-top: 1px solid #f7f7f7;
-}
+    .file_manager .file .file-name {
+        padding: 10px;
+        border-top: 1px solid #f7f7f7;
+    }
 
-.file_manager .file .file-name small .date {
-    float: right;
-}
+        .file_manager .file .file-name small .date {
+            float: right;
+        }
 
 .folder {
     padding: 20px;
@@ -76,9 +76,10 @@ body {
         padding-left: 0;
         padding-right: 0;
     }
-    .file_manager .nav-tabs .nav-item {
-        display: inline-block;
-    }
+
+        .file_manager .nav-tabs .nav-item {
+            display: inline-block;
+        }
 }
 
 .card {
@@ -101,8 +102,8 @@ a:hover {
     border-color: #007bff;
 }
 
-.btn-outline-primary:hover {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-}
+    .btn-outline-primary:hover {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
