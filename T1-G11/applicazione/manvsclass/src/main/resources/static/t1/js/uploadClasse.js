@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Si aggancia al form tramite ID
-    const form = document.getElementById('formId');
+    const form = document.getElementById('uploadForm');
 
     // Funzione per l'upload della classe e generazione dei test
     window.uploadFile = function (event) {
+        // Mostra il feedback di caricamento al click del pulsante
+        document.getElementById('loadingIndicator').style.display = 'inline-block';
+
+        event.preventDefault(); // Previene il comportamento predefinito del form
+
         // Creazione delle costanti che rappresentano i dati input al form
         const name = document.getElementById('className').value;
         const date = document.getElementById('date').value;
@@ -32,9 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
             category: category
         }));
 
-        // Mostra la schermata di caricamento prima della richiesta POST
-        document.getElementById('loadingOverlay').style.display = 'block';
-
         $.ajax({
             url: '/uploadFile',
             type: 'POST',
@@ -43,17 +45,20 @@ document.addEventListener("DOMContentLoaded", function () {
             contentType: false,
             success: function (data) {
                 console.log('Success:', data);
-                // Nascondi la schermata di caricamento dopo il caricamento
-                document.getElementById('loadingOverlay').style.display = 'none';
+                // Nascondi il feedback di caricamento dopo il caricamento
+                document.getElementById('loadingIndicator').style.display = 'none';
                 window.location.href = '/class';
                 // Aggiungi qui il codice per gestire la risposta dal server
             },
             error: function (error) {
                 console.error('Error:', error);
-                // Nascondi la schermata di caricamento in caso di errore
-                document.getElementById('loadingOverlay').style.display = 'none';
+                // Nascondi il feedback di caricamento in caso di errore
+                document.getElementById('loadingIndicator').style.display = 'none';
                 // Aggiungi qui il codice per gestire gli errori
             }
         });
     }
+
+    // Aggancia la funzione uploadFile al submit del form
+    form.addEventListener('submit', uploadFile);
 });
