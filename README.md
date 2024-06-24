@@ -16,8 +16,7 @@ Il progetto è stato ampliato integrando il lavoro svolto dal gruppo A13-2024 ch
 1. Pulizia delle pagine HTML rimuovendo frammenti di codice CSS e JS
 2. Cambio di stile delle pagine HTML lato admin per migliorare la sua esperienza di gioco
 
-```
-# PREREQUISITI
+### PREREQUISITI
 1. Assicurarsi di aver correttamente clonato sul proprio workspace, il repository A13 di riferimento; si consiglia, innanzitutto, di 
 scaricare, al seguente indirizzo https://git-scm.com/downloads, ed installare, sul proprio computer, Git (per una guida completa all'installazione fare riferimento al seguente indirizzo: https://github.com/git-guides/install-git).
 Una volta aver completato l'installazione, sarà possibile clonare i repository GitHub sulla propria macchina:
@@ -34,40 +33,11 @@ Una volta aver completato l'installazione, sarà possibile clonare i repository 
 
 2. Assicurarsi di avere Java e Maven installati correttamente sulla propria macchina e di aver settato le variabili d'ambiente.
 
-# SPECIFICHE E VERSIONI UTILIZZATE
-```
-Specifiche dispositivo
-----------------------
-Processore      Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz   1.80 GHz
-RAM installata  8,00 GB (7,88 GB utilizzabile)
-----------------------
-Specifiche Windows
-----------------------
-Edizione    Windows 10 Home
-Versione    10.0.19045.4291
-----------------------
-Docker Desktop
-----------------------
-Versione    4.29.0
-----------------------
-Windows Subsystem for Linux
-----------------------
-Versione WSL: 2.0.14.0
-Versione kernel: 5.15.133.1-1
-Versione WSLg: 1.0.59
-Versione MSRDC: 1.2.4677
-Versione Direct3D: 1.611.1-81528511
-Versione DXCore: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
------------------------
-Maven
------------------------
-Versione    3.9.6
------------------------   
-```
 
-# GUIDA ALL'INSTALLAZIONE
 
-## PASSO 1
+### GUIDA ALL'INSTALLAZIONE
+
+### PASSO 1
 Scaricare e installare Docker Desktop per il proprio sistema operativo: se già installato correttamente sulla macchina passare al Passo 2.
 
 NOTA: sebbene il Windows Subsystem for Linux wsl2, una funzionalità che consente di eseguire un ambiente Linux all'interno del sistema operativo Windows garantendo la compatibilità tra Docker Desktop e Windows, normalmente venga installato e aggiornato durante l'installazione di Docker Desktop, vi sono casi in cui questo step non venga effettuato correttamente in maniera automatica (all'apertura di Docker è presente un messaggio di errore "WSL Error"), bisogna quindi installare manualmente wsl tramite i seguenti step:
@@ -80,10 +50,10 @@ d) riavviare la macchina
 1) Procedere all'installazione di Docker Desktop: https://www.docker.com/products/docker-desktop/
 2) All'avvio di Docker Desktop nella sezione Settings -> General controllare che sia spuntata l'opzione "Use the WSL 2 based engine"
 
-## PASSO 1B
+### PASSO 1B
 Nel caso non sia la prima installazione, per la disinstallazione utilizzare "uninstaller.bat" mentre si ha in esecuzione Docker, in questo modo si elimina qualunque file presente su Docker.
 
-## PASSO 2
+### PASSO 2
 Avviare lo script "installer.bat" se si sta usando una distribuzione Windows oppure "installermac.sh" nel caso si utilizzi macOS o una distro di Linux.
 Per MacOS - eseguire nella cartella dove è presente il file ”installermac.sh” il comando "chmod +x installermac.sh" per renderlo eseguibile, e poi "./installermac.sh" per eseguirlo.
 Tali script dovranno essere avviati unicamnete con Docker in esecuzione, altrimenti l'installazione non partirà. Saranno effettuate le seguenti operazioni:
@@ -96,7 +66,7 @@ Tali script dovranno essere avviati unicamnete con Docker in esecuzione, altrime
    
 NOTA: il container relativo al Task 9 ("Progetto-SAD-G19-master") si sospenderà autonomamente dopo l'avvio. Esso viene utilizzato solo per "popolare" il volume "VolumeT9" condiviso con il Task 1.
 
-# ATTENZIONE
+### ATTENZIONE
 Nel corso dell'installazione dello script: "installer.bat", è possibile incappare nell'errore:
 <pre>
 E: invalid operation update
@@ -111,7 +81,7 @@ Edit => EOL Conversion => Unix(LF) dopodichè salvare
 # Passi opzionali per esporre l'applicazione su un indirizzo pubblico
 __NB: Ogni lettera rappresenta una soluzione diversa__
 
-# A: Installazione NGROK
+### A: Installazione NGROK
 Nel caso sia stato già installato basterà avviare il container e collegarsi all'indirizzo fornito in precedenza
 
  __PASSO A.1__:
@@ -138,7 +108,7 @@ A questo punto si avrà l'indirizzo pubblico come risposta nel prompt dei comand
 https://github.com/Testing-Game-SAD-2023/A10-2024/assets/148564450/0292d839-321f-4172-a044-25648d291753
 
 
-# B: Esposizione localhost tramite Pinggy
+### B: Esposizione localhost tramite Pinggy
 
 __ATTENZIONE__: 
 Si consiglia di non diffondere il link generato da Pinggy poiché all'interno è presente il proprio indirizzo pubblic. 
@@ -153,7 +123,7 @@ Mentre Docker è in esecuzione digitare il seguente comando sul prompt dei coman
 Per la richiesta della password, dare una stringa vuota.
 Infine compariranno a schermo l'indirizzo pubblico.
 
-# Guida alle modifiche al codice
+### Guida alle modifiche al codice
 
 Se è necessario modificare il codice dell'applicazione, seguire attentamente i seguenti passaggi:
 
@@ -171,7 +141,7 @@ Se è necessario modificare il codice dell'applicazione, seguire attentamente i 
 
 ---
 
-# Problematiche di utilizzo
+### Problematiche di utilizzo
 
 Di seguito sono elencate alcune delle problematiche riscontrate durante l'utilizzo dell'applicazione al fine di agevolarne l'utilizzo per i gruppi successivi.
 
